@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JS, Barber, Alin, Ignat, Frizer, Frizerie, Tuns, Tunsoare, Barbierit, Aranjat, Salon, Fade, Shave, Clean, Curat"
+    />
+    <meta
+      name="author"
+      content="Nedieanu Mihai-Alexandru, nedieanualex@gmail.com"
+    />
+    <meta
+      name="description"
+      content="Programari si rezervari la Alin Ignat Barber"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ignat Alin Barber</title>
+  </head>
+  <body>
+    <div class="lines">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="container">
+      <div class="modal hidden">
+        <a class="close-modal">&times;</a>
+        <iframe
+          id="map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d178.4075836712222!2d23.83090662994483!3d44.31978990491902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4752d6fd7f4c92b7%3A0xa204a00513cddd68!2sStrada%20G%C3%A2rle%C8%99ti%2011%2C%20Craiova%20207280!5e0!3m2!1sen!2sro!4v1620607715086!5m2!1sen!2sro"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="wrapper-menu">
+        <div class="profile-image">
+          <img id="img-prof" src="/images/profile-image.jpg" alt="" />
+        </div>
+        <div class="name">
+          <h1>Ignat Alin</h1>
+        </div>
+        <div class="wrapper-tabs">
+          <ul style="white-space: nowrap">
+            <li><img id="img-map" src="/images/map.png" alt="🗺" /></li>
+            <li>
+              <a href="https://www.facebook.com/ignat.alin.1" target="_blank"
+                ><img id="img-fb" src="/images/facebook.png" alt="🐱‍🏍"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/ignatalin_barber/"
+                target="_blank"
+                ><img id="img-insta" src="/images/instagram.png" alt="🤷‍♂️"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="break-line"></div>
+
+      <div class="wrapper-buttons">
+        <button id="price">Preturi</button>
+        <button id="schedule">Despre</button>
+        <button id="gallery">Galerie</button>
+      </div>
+
+      <div class="break-line"></div>
+
+      <div class="wrapper-content">
+        <div class="wrapper-prices">
+          <ul class="styles">
+            <li>Tuns Barbat</li>
+            <li>Barba</li>
+            <li>Tuns + Barba</li>
+            <li>Spalare</li>
+          </ul>
+          <ul class="prices">
+            <li>25 Ron</li>
+            <li>5 Ron</li>
+            <li>30 Ron</li>
+            <li>5 Ron</li>
+          </ul>
+
+          <br />
+          <div class="break-line middle"></div>
+          <br />
+
+          <div class="wrapper-contact">
+            <p>Rezervările se realizează exclusiv prin telefon</p>
+
+            <form action="tel:0771036543">
+              <button id="phone" type="submit">0771 036 543</button>
+            </form>
+          </div>
+        </div>
+        <div class="wrapper-program hidden">
+          <ul class="days">
+            <li>Luni</li>
+            <li>Marti</li>
+            <li>Miercuri</li>
+            <li>Joi</li>
+            <li>Vineri</li>
+            <li>Sambata</li>
+            <li style="color: rgb(121, 8, 8)">Duminica</li>
+          </ul>
+          <ul class="intervals">
+            <li>08:00 - 20:00</li>
+            <li>08:00 - 20:00</li>
+            <li>08:00 - 20:00</li>
+            <li>08:00 - 20:00</li>
+            <li>08:00 - 20:00</li>
+            <li>10:00 - 20:00</li>
+            <li style="color: rgb(121, 8, 8)">Închis</li>
+          </ul>
+
+          <br />
+          <div class="break-line middle"></div>
+
+          <div class="wrapper-address">
+            <p>Adresă</p>
+            <p>Strada Gârlești, Nr. 11, Craiova, România</p>
+            <button id="to-map">Direcții</button>
+          </div>
+        </div>
+        <div class="wrapper-slider hidden">
+          <div class="slideshow-container">
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <img src="/images/haircut1.jpg" id="photo-sl2" />
+            </div>
+
+            <div class="mySlides fade">
+              <img src="/images/haircut2.jpg" id="photo-sl3" />
+            </div>
+
+            <div class="mySlides fade">
+              <img src="/images/haircut3.jpg" id="photo-sl1" />
+            </div>
+
+            <div class="mySlides fade">
+              <img src="/images/haircut4.jpg" id="photo-sl2" />
+            </div>
+
+            <div class="mySlides fade">
+              <img src="/images/haircut5.jpg" id="photo-sl3" />
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br />
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper-footer">
+        <p>Ignat Alin Barber ©</p>
+        <a
+          class="author-contact"
+          href="https://www.linkedin.com/in/nedieanualexandru/"
+          target="_blank"
+          >Created by ✉</a
+        >
+      </div>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="slide.js"></script>
+    <script src="modal.js"></script>
+  </body>
+</html>

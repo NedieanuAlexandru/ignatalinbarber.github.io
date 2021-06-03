@@ -1,0 +1,676 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;1,600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: url(/images/background2.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.close-modal {
+  position: absolute;
+  top: -1%;
+  right: 1%;
+  font-size: 250%;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Line surrounding buttons */
+.break-line {
+  align-self: center;
+  width: 85%;
+  margin: auto;
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
+  border: 0;
+  height: 0.1rem;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 70vh;
+
+  background-color: rgb(219, 213, 213);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+#img-map {
+  cursor: pointer;
+  margin-right: 3%;
+}
+
+#img-fb {
+  cursor: pointer;
+}
+
+#img-insta {
+  cursor: pointer;
+}
+
+.container {
+  border: 0.5rem solid rgb(77, 76, 76);
+  border-radius: 2rem;
+  width: 40%;
+  margin: auto;
+  height: auto;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  background-color: rgb(166, 163, 180);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Style for menu side */
+.wrapper-menu {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  margin-bottom: 2%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.profile-image {
+  width: 10%;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+#img-prof {
+  width: 250%;
+  height: auto;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.name {
+  width: 35%;
+  margin: auto;
+  margin-top: 15%;
+  margin-left: 25%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 100%;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.wrapper-tabs {
+  width: 35%;
+  margin: 0;
+  text-align: center;
+  margin-top: 1%;
+  padding-left: 0;
+  margin-right: 2%;
+}
+
+.wrapper-tabs li {
+  display: inline;
+  margin-right: 0;
+  font-size: 300%;
+}
+
+.wrapper-tabs li img {
+  width: 30%;
+  height: 8vh;
+  margin-top: 5%;
+  margin-right: 0;
+}
+
+/* Style for buttons */
+.wrapper-buttons {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.wrapper-buttons button {
+  margin-right: 2%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 120%;
+}
+
+/* Style for content side */
+.wrapper-content {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.styles {
+  width: 40%;
+  float: left;
+  margin-left: 12%;
+}
+
+.styles li {
+  font-size: 200%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.prices {
+  width: 60%;
+  margin: auto;
+}
+
+.prices li {
+  font-size: 190%;
+  margin-left: 70%;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+
+.days {
+  width: 40%;
+  float: left;
+  margin-left: 12%;
+}
+
+.days li {
+  font-size: 130%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.intervals {
+  width: 60%;
+  margin: auto;
+}
+
+.intervals li {
+  font-size: 130%;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 60%;
+  text-align: center;
+}
+
+/* Style for slider */
+.wrapper-slider {
+  width: 100%;
+  margin: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+#photo-sl1,
+#photo-sl2,
+#photo-sl3 {
+  width: 100%;
+  height: 20rem;
+  border-radius: 9px;
+  box-shadow: 0 10px 30px black, inset 0 0 9px white;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Buttons styling */
+button {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 120%;
+  font-weight: 600;
+  width: 7rem;
+  height: 2rem;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  border: none;
+  cursor: pointer;
+  outline: 0;
+  color: #fff;
+  background: #111;
+  z-index: 0;
+  border-radius: 3rem;
+}
+
+button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 0.2rem);
+  height: calc(100% + 0.2rem);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 3rem;
+}
+
+button:active {
+  color: #000;
+}
+
+button:active::after {
+  background: transparent;
+}
+
+button:before {
+  opacity: 1;
+}
+
+button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 3rem;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* Style for address */
+.wrapper-address {
+  width: 100%;
+  margin: auto;
+  margin-top: 4%;
+}
+
+.wrapper-address p {
+  font-size: 140%;
+  margin-left: 12%;
+}
+
+#to-map {
+  width: 100.2%;
+  height: 2.5rem;
+  border-radius: 5px;
+  font-size: 150%;
+}
+
+#to-map:after {
+  border-radius: 5px;
+}
+
+/* Style for contact */
+.wraper-contact {
+  width: 100%;
+  margin: auto;
+}
+
+.wrapper-contact p {
+  font-size: 140%;
+  margin-left: 12%;
+  margin-top: 3.5%;
+}
+
+#phone {
+  width: 100.2%;
+  height: 2.5rem;
+  border-radius: 5px;
+  font-size: 130%;
+}
+
+#phone:after {
+  border-radius: 5px;
+}
+
+.middle {
+  width: 50%;
+}
+
+#phone a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Footer style */
+.wrapper-footer {
+  width: 100%;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper-footer a {
+  font-size: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+/* Device media styling */
+
+/* Extra small devices */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    height: auto;
+    margin-top: 15%;
+  }
+
+  .wrapper-tabs {
+    width: 30%;
+    margin-top: 2%;
+  }
+
+  .wrapper-tabs li img {
+    height: 5vh;
+  }
+
+  .name {
+    font-size: 75%;
+  }
+
+  .wrapper-prices {
+    width: 100%;
+  }
+
+  .styles {
+    width: 50%;
+  }
+
+  .prices {
+    width: 100%;
+  }
+
+  .prices li {
+    font-size: 150%;
+  }
+
+  .styles li {
+    font-size: 150%;
+  }
+
+  .wrapper-contact p {
+    font-size: 140%;
+  }
+
+  .days {
+    width: 15%;
+    font-size: 100%;
+  }
+
+  .intervals {
+    width: 85%;
+    font-size: 100%;
+  }
+}
+
+/* Small devices */
+@media screen and (min-width: 600px) {
+  .container {
+    width: 70%;
+    margin-top: 7%;
+  }
+
+  .wrapper-tabs {
+    width: 30%;
+    margin-top: 2%;
+  }
+
+  .wrapper-tabs li img {
+    height: 9vh;
+  }
+
+  .name {
+    font-size: 100%;
+  }
+
+  .wrapper-prices {
+    width: 100%;
+  }
+
+  .styles {
+    width: 50%;
+  }
+
+  .prices {
+    width: 100%;
+  }
+
+  .prices li {
+    font-size: 180%;
+  }
+
+  .styles li {
+    font-size: 180%;
+  }
+
+  .wrapper-contact p {
+    font-size: 140%;
+  }
+
+  .days {
+    width: 15%;
+    font-size: 120%;
+  }
+
+  .intervals {
+    width: 85%;
+    font-size: 120%;
+  }
+
+  .wrapper-address p {
+    font-size: 150%;
+  }
+
+  #to-map {
+    height: 6vh;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 40%;
+    margin-top: 2%;
+  }
+
+  .wrapper-tabs {
+    width: 40%;
+    margin-top: 2%;
+  }
+
+  .wrapper-tabs li img {
+    height: 8vh;
+  }
+
+  .name {
+    font-size: 100%;
+  }
+
+  .wrapper-prices {
+    width: 100%;
+  }
+
+  .styles {
+    width: 50%;
+  }
+
+  .prices {
+    width: 100%;
+  }
+
+  .prices li {
+    font-size: 180%;
+  }
+
+  .styles li {
+    font-size: 180%;
+  }
+
+  .wrapper-contact p {
+    font-size: 140%;
+  }
+
+  .days {
+    width: 15%;
+    font-size: 120%;
+  }
+
+  .intervals {
+    width: 85%;
+    font-size: 120%;
+  }
+
+  .wrapper-address p {
+    font-size: 150%;
+  }
+
+  #to-map {
+    height: 6vh;
+  }
+}
